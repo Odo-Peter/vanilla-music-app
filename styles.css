@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* light mode */
+  --bg-color: rgb(241, 236, 236);
+  --text-color: #1c1c1c;
+  /* dark mode */
+  --bg-color2: #1c1c1c;
+  --text-color2: rgb(241, 236, 236);
+
+  --box-shadow: 0px 15px 30px rgba(255, 255, 255, 0.3);
+  --box-shadow2: 0px 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-size: 2rem;
+  text-shadow: var(--box-shadow2);
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 1.2rem;
+  text-shadow: var(--box-shadow2);
+  font-weight: 400;
+  margin-top: -8px;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  overflow: hidden;
+  font-family: 'League Spartan', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 68vh;
+  width: 35vw;
+  transition: all 400ms ease-in-out;
+}
+
+.container .card-like {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 18px;
+  background-color: #fff;
+  box-shadow: var(--box-shadow2);
+}
+
+.container .card-like .img-div {
+  height: 60%;
+  width: 65%;
+  margin-top: -4rem;
+  border-radius: 15px;
+  box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.5);
+}
+
+.container .card-like .img-div img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.container .card-like .time-frame {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  height: 6px;
+  width: 80%;
+}
+
+.container .card-like .time-frame p {
+  font-size: 13px;
+  padding: 0 10px;
+}
+
+.container .card-like .time-frame .guage {
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-color);
+  border-radius: 15px;
+}
+
+.container .card-like .time-frame .guage #time-panel {
+  height: 100%;
+  width: 0%;
+  background-color: var(--text-color);
+  border-radius: 15px;
+}
+
+.guage:hover {
+  cursor: pointer;
+}
+
+.container .card-like .controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 10px;
+}
+
+.fa-solid {
+  font-size: 2.2rem;
+  padding: 3px;
+}
+
+#pause {
+  display: none;
+}
+
+.fa-solid:hover {
+  cursor: pointer;
+  filter: brightness(0.6%);
+}
+
+/* media queries */
+@media (max-width: 380px) {
+  .container {
+    height: 80vh;
+    width: 85vw;
+  }
+
+  .container .card-like .img-div {
+    height: 55%;
+    width: 70%;
+    margin-top: -6rem;
+  }
+
+  h1 {
+    margin-top: 1rem;
+  }
+}
